@@ -1,17 +1,18 @@
 @startuml
 'https://plantuml.com/class-diagram
-enum Hazard{
+
+enum Hazard {
     BLOCKAGE
 }
 
-enum Difficulty{
+enum Difficulty {
     EASY
     NORMAL
     HARD
     EXPERT
 }
 
-class Report{
+class Report {
     +hazardType: Hazard
     +message: String
     +location: Location
@@ -19,7 +20,7 @@ class Report{
     +postReport(): Boolean CHECK THIS LATER!!!!!!!!!!!!!!!
 
 }
-class Mountain{
+class Mountain {
     -mountainId: Int
     -location: Location
     -description: String
@@ -46,11 +47,11 @@ class User {
 
 }
 
-class Comment{
+class Comment {
     -userId: Int
     -message: String
 }
-class Like{
+class Like {
     -userId: Int
 }
 class Location {
@@ -73,28 +74,20 @@ abstract class Post {
 
 
     +constructor(postId: Int, title: String, author: String, location: Location, description: String)
-
     +comment(comment: Comment): Boolean
     +deleteComment(comment: Comment): Boolean
-
     +like(like: Like): Boolean
     +unlike(like: Like): Boolean
-
     +delete(): Boolean
     +report(message: String): Boolean
-
-
-
 }
 
-class Route{
+class Route {
     -path: List<Location>
     -difficultyType: Difficulty
     -totalDistance: Double
     -distanceUp: Double
     -distanceDown: Double
-
-
 }
 
 class VideoPost {
@@ -106,6 +99,7 @@ class ImagePost {
     +imageUrl: String
     +resolution: String
 }
+
 User o-- Location
 Post o-- Route
 Post o-- Comment
@@ -118,4 +112,5 @@ Route *-- Difficulty
 User o-- Post
 Mountain o-- Location
 Report o-- Location
+
 @enduml
