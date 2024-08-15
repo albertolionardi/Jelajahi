@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Jelajahi</string>
+    <string name="welcome_to_the_mountain_page">Welcome to the Mountain Page!</string>
+    <string name="go_to_mountain_page">Go to Mountain Page</string>
 </resources>
