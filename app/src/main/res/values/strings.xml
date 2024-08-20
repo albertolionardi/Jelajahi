@@ -3,4 +3,5 @@
     <string name="welcome_to_the_mountain_page">Welcome to the Mountain Page!</string>
     <string name="go_to_mountain_page">Go to Mountain Page</string>
     <string name="logo">App Logo</string>
+    <string name="title_activity_maps">MapsActivity</string>
 </resources>
